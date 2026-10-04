@@ -1,0 +1,37 @@
+# Copy to .env locally for scripts only — NEVER commit .env with real values.
+# Production secrets live in Railway Shared Variables / service secrets.
+
+# --- Public URLs (after gateway domain is known) ---
+DIFY_PUBLIC_URL=https://dify.ajumrah.com
+DIFY_API_URL=https://dify.ajumrah.com/v1
+
+# --- Smoke test (fill after creating app + API key in Dify console) ---
+DIFY_APP_API_KEY=
+DIFY_USER=smoke-test-user
+
+# --- Supabase (direct / session connection — not transaction pooler) ---
+DB_HOST=aws-0-ap-southeast-1.pooler.supabase.com
+DB_PORT=5432
+DB_USERNAME=postgres.glyxaxnfshzxhabvzlbh
+DB_PASSWORD=zSh7JQwt5y4c
+DB_DATABASE=postgres
+
+DB_DATABASE_URL=postgresql://postgres.glyxaxnfshzxhabvzlbh:zSh7JQwt5y4c@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres
+
+VECTOR_STORE=pgvector
+PGVECTOR_HOST=db.xxxxxxxxxxxx.supabase.co
+PGVECTOR_PORT=5432
+PGVECTOR_USER=postgres
+PGVECTOR_PASSWORD=REPLACE_IN_RAILWAY_ONLY
+PGVECTOR_DATABASE=postgres
+
+# --- Redis (Railway Redis private hostname) ---
+REDIS_HOST=
+REDIS_PORT=6379
+REDIS_PASSWORD=
+
+# --- Shared Dify crypto (generate with scripts/generate_secret_key.sh) ---
+SECRET_KEY=
+
+# --- Optional: script defaults ---
+CURL_INSECURE=0
